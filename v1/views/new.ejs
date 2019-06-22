@@ -1,0 +1,36 @@
+<% include partials/header %>
+<div class="navbar navbar-grey">
+        <div class="navbar-left">
+            <a class="navbar-brand" href="/">YelpCamp</a>
+        </div>
+        <div class="navbar-collapse">
+            <ul>
+                <li><a class="navbar-brand navbar-brand__sub" href="#">Login</a></li>
+                <li><a class="navbar-brand navbar-brand__sub" href="#">Sign Up</a></li>
+                <li><a class="navbar-brand navbar-brand__sub" href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+<section class="section-new">
+<div class="row">
+    <div class="new">
+        <div class="new__form">
+            <h1 class="heading-secondary ">Create a New Campground</h1>
+            <form action="/campgrounds" method="POST" class="form">
+                <div class="form__group">
+                    <input type="text" name="name" placeholder="name" class="form__input" id="name" required>
+                    <label for="name" class="form__label">Image name</label>
+                </div>
+                <div class="form__group">
+                    <input type="text" name="image" placeholder="image url" class="form__input" id="image" required>
+                    <label for="image" class="form__label">Image url</label> 
+                </div>
+                <button class=" btn-primary btn-submit btn-animated">Submit!</button>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<% include partials/footer %>

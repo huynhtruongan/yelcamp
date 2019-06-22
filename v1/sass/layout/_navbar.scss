@@ -1,0 +1,38 @@
+.navbar {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem 2rem;
+    &-grey {
+        background: $color-grey-light;
+    }
+    &-left {
+        float: left;
+    }
+    &-brand {
+        
+        &:link, &:visited {
+            text-decoration: none;
+            color: white;
+            font-weight: 900;
+
+
+        }
+        &__sub{
+            &:link, &:visited{
+                margin-right: 1rem;
+                font-weight: 400;
+            }
+            
+        }
+    }
+    &-collapse {
+        float: right;
+        ul {
+            list-style: none;
+            display: inline-block;
+            li{
+                float: left;
+            }
+        }
+    }
+}

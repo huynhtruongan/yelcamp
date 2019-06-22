@@ -1,0 +1,19 @@
+{
+  "name": "v1",
+  "version": "1.0.0",
+  "description": "YelpCamp v1",
+  "main": "app.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss public/css/style.css"
+  },
+  "author": "An Dev",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  }
+}

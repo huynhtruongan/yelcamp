@@ -1,0 +1,41 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/form";
+
+@import "pages/home";
+
+@import "layout/grid";
+@import "layout/jumbotron";
+@import "layout/navbar";
+@import "layout/new";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+}
+body{ 
+    font-family: 'lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-grey-dark;
+}
+.container {
+    max-width: 128rem;
+    margin: 0 auto;
+}
+
+
