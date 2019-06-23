@@ -1,0 +1,17 @@
+.section-new{
+  
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom , $color-primary-light, $color-primary-dark);
+}
+.new {
+    background-image:linear-gradient(105deg,rgba(white, .9) 0%,rgba(white, .9) 100%),url(http://labs4.kentooz.com/wpwallpaper/wp-content/uploads/2013/04/Village-Wallpaper-198.jpg);
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(black, .2);
+    height: 50rem;
+    &__form{
+        width: 65%;
+        padding: 6rem;
+        margin: 0 auto;
+    }
+}
