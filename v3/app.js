@@ -57,9 +57,14 @@ app.get("/campgrounds/new",(req, res)=>{
     res.render("new.ejs");
 })
 app.get('/campgrounds/:id', (req, res)=>{
-    Campground.findById(req.params.id, (err, foundCampground)=>{
+    Campground.findById(req.params.id).populate('comments').exec((err, foundCampground)=>{
+        console.log(foundCampground)
         if (err) console.log(err);
-        else res.render('show', {campground : foundCampground});       
+        else {
+            
+            res.render('show', {campground : foundCampground})
+            
+        }       
     })
 })
 
