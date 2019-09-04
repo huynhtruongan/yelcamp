@@ -5,6 +5,7 @@
 <h1><%= campground.name %></h1>
 <img src="<%= campground.image%>" alt="campground">
 <p><%= campground.description%></p>
+<a class="btn-primary btn-submit btn-animated" href="/campgrounds/<%=campground._id%>/comments/new">New comment</a>
 <% campground.comments.forEach((comment)=>{ %>
     <p><strong><%= comment.author %></strong> - <%= comment.text %></p>
 <% }) %>
