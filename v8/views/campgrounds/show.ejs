@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+<div class="row">
+    <div class="col-1-of-4">
+        <h1>yelcamp</h1>
+        <ul>
+            <li>info</li>
+            <li>info</li>
+            <li>info</li>
+        </ul>
+    </div>
+    <div class="col-3-of-4">
+        <h1><%= campground.name %></h1>
+        <img src="<%= campground.image%>" alt="campground">
+        <p><%= campground.description%></p>
+        <p><em> Submited By <%= campground.author.username %></em></p>
+        <a class="btn-primary btn-submit btn-animated" href="/campgrounds/<%=campground._id%>/comments/new">New comment</a>
+        <% campground.comments.forEach((comment)=>{ %>
+            <p><strong><%= comment.author.username %></strong> - <%= comment.text %></p>
+        <% }) %>
+    </div>
+    
+</div>
+
+
+
+
+<% include ../partials/footer %>

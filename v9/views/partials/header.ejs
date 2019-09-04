@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YelpCamp</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+            <div class="navbar navbar-grey">
+                    <div class="navbar-left">
+                        <a class="navbar-brand" href="/">YelpCamp</a>
+                    </div>
+                    <div class="navbar-collapse">
+                        <ul>
+                           <% if(!currentUser){ %>
+                                <li><a class="navbar-brand navbar-brand__sub" href="/login">Login</a></li>
+                                <li><a class="navbar-brand navbar-brand__sub" href="/register">Sign Up</a></li>
+                            <% }else{ %>
+                                <li>Hello <%= currentUser.username %></li>
+                                <li><a class="navbar-brand navbar-brand__sub" href="/logout">Logout</a></li>
+                            <% }%>
+    
+                        </ul>
+                    </div>
+                </div>
