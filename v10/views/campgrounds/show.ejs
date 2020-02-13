@@ -13,11 +13,13 @@
         <img src="<%= campground.image%>" alt="campground">
         <p><%= campground.description%></p>
         <p><em> Submited By <%= campground.author.username %></em></p>
-        <a class="btn-primary btn-submit btn-animated" href="/campgrounds/<%=campground._id%>/edit">Edit</a>        
-        <a class="btn-primary btn-submit btn-animated" href="/campgrounds/<%=campground._id%>/comments/new">New comment</a>
-        <form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
-            <button class="btn-primary btn-submit btn-animated">delete</button>
-        </form>
+        <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
+            <a class="btn-primary btn-submit btn-animated" href="/campgrounds/<%=campground._id%>/edit">Edit</a>        
+            <a class="btn-primary btn-submit btn-animated" href="/campgrounds/<%=campground._id%>/comments/new">New comment</a>
+            <form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+                <button class="btn-primary btn-submit btn-animated">delete</button>
+            </form>
+        <% } %>
         <% campground.comments.forEach((comment)=>{ %>
             <p><strong><%= comment.author.username %></strong> - <%= comment.text %></p>
         <% }) %>
