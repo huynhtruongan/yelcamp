@@ -9,7 +9,7 @@
   "author": "An Dev",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "^7.0.0"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
